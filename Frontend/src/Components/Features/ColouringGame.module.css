@@ -1,0 +1,166 @@
+.container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h2 {
+  color: #bef2d6;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  color: #a0c4d8;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.controlPanel {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.colorSelector {
+  margin-bottom: 1rem;
+}
+
+.colorSelector label,
+.brushControl label {
+  color: #bef2d6;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.colorGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.colorBtn {
+  width: 45px;
+  height: 45px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.colorBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.colorBtn.active {
+  border-color: #bef2d6;
+  box-shadow: 0 0 12px rgba(190, 242, 214, 0.6);
+  transform: scale(1.15);
+}
+
+.brushControl {
+  margin-top: 1rem;
+}
+
+.slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #82f0c9, #4ECDC4);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #bef2d6;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(130, 240, 201, 0.4);
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #bef2d6;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(130, 240, 201, 0.4);
+}
+
+.canvas {
+  width: 100%;
+  max-width: 600px;
+  height: 380px;
+  background: linear-gradient(135deg, rgba(20, 40, 60, 0.4), rgba(30, 50, 70, 0.3));
+  border: 2px solid rgba(130, 240, 201, 0.3);
+  border-radius: 12px;
+  cursor: crosshair;
+  display: block;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #82f0c9, #4ECDC4);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(130, 240, 201, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(130, 240, 201, 0.5);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.downloadBtn {
+  background: linear-gradient(135deg, #FFE66D, #F38181);
+  box-shadow: 0 4px 15px rgba(255, 230, 109, 0.3);
+}
+
+.downloadBtn:hover {
+  box-shadow: 0 6px 20px rgba(255, 230, 109, 0.5);
+}
+
+.benefits {
+  background: rgba(130, 240, 201, 0.1);
+  border-left: 4px solid #82f0c9;
+  padding: 1rem;
+  border-radius: 5px;
+  color: #a0c4d8;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}

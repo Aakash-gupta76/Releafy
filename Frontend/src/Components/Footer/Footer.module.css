@@ -1,0 +1,255 @@
+.footer {
+  height: 300px;
+  background: linear-gradient(135deg, rgba(3, 35, 53, 0.9), rgba(13, 33, 44, 0.95));
+  border-top: 1px solid rgba(130, 240, 201, 0.3);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.footerContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Developer Section */
+.devSection {
+  text-align: center;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.devText {
+  color: #b8e8e1;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.bouncingLetter {
+  display: inline-block;
+  animation: bounceUpDown 2s ease-in-out infinite;
+}
+
+.devName {
+  color: #bef2d6;
+  font-size: 2rem;
+  margin: 10px 0 0 0;
+  font-weight: 400;
+  letter-spacing: 6px;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.letter {
+  display: inline-block;
+  animation: floatInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.letter:nth-child(1) { animation-delay: 0.1s; }
+.letter:nth-child(2) { animation-delay: 0.2s; }
+.letter:nth-child(3) { animation-delay: 0.3s; }
+.letter:nth-child(4) { animation-delay: 0.4s; }
+.letter:nth-child(5) { animation-delay: 0.5s; }
+.letter:nth-child(6) { animation-delay: 0.6s; }
+.letter:nth-child(7) { animation-delay: 0.7s; }
+.letter:nth-child(8) { animation-delay: 0.8s; }
+.letter:nth-child(9) { animation-delay: 0.9s; }
+
+@keyframes floatInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Social Section */
+.socialSection {
+  position: relative;
+  z-index: 2;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.socialIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(82, 200, 180, 0.2), rgba(82, 200, 180, 0.1));
+  border: 2px solid rgba(130, 240, 201, 0.4);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: bounceUpDown 2s ease-in-out infinite;
+}
+
+@keyframes bounceUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.socialIcon:hover {
+  background: linear-gradient(135deg, rgba(82, 200, 180, 0.4), rgba(82, 200, 180, 0.3));
+  border-color: rgba(130, 240, 201, 0.7);
+  box-shadow: 0 0 20px rgba(82, 200, 180, 0.4);
+  transform: scale(1.15);
+}
+
+.icon {
+  font-size: 1.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.socialIcon:hover .icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Copyright Section */
+.copyright {
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.copyrightText {
+  color: #7a9f96;
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+    padding: 30px 15px;
+  }
+
+  .footerContent {
+    padding: 30px 15px;
+  }
+
+  .devName {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    gap: 2px;
+  }
+
+  .devText {
+    font-size: 0.85rem;
+  }
+
+  .socialIcons {
+    gap: 15px;
+  }
+
+  .socialIcon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon {
+    font-size: 1.2rem;
+  }
+
+  .copyrightText {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    height: auto;
+  }
+
+  .footerContent {
+    padding: 20px 10px;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .devName {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+
+  .letter {
+    font-size: 0.9rem;
+  }
+
+  .socialIcons {
+    gap: 10px;
+  }
+
+  .socialIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon {
+    font-size: 1rem;
+  }
+
+  .copyrightText {
+    font-size: 0.7rem;
+  }
+}

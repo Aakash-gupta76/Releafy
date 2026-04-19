@@ -1,0 +1,184 @@
+.assessment {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+  margin-bottom: 2rem;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #66bb6a, #2e7d32);
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  display: block;
+  text-align: center;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.question h3 {
+  color: #2e7d32;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.option {
+  padding: 1rem 1.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  background: white;
+  color: #4a5568;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.option:hover {
+  border-color: #66bb6a;
+  background: #f0f9f0;
+}
+
+.option.selected {
+  border-color: #2e7d32;
+  background: #e8f5e8;
+  color: #2e7d32;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.navBtn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.navBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.navBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.results {
+  text-align: center;
+}
+
+.results h3 {
+  color: #2e7d32;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.stressLevel {
+  margin-bottom: 2rem;
+}
+
+.stressIndicator {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.emoji {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.levelText {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.score {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.recommendations {
+  margin-bottom: 2rem;
+}
+
+.recommendations h4 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.recommendation {
+  background: rgba(102, 187, 106, 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.recommendation h5 {
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.recommendation p {
+  color: #4a5568;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.retakeBtn {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.retakeBtn:hover {
+  transform: translateY(-2px);
+}

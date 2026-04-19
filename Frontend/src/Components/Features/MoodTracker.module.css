@@ -1,0 +1,188 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.moodSelector label {
+  display: block;
+  margin-bottom: 1rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.moodOptions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.moodButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 80px;
+}
+
+.moodButton:hover {
+  border-color: #66bb6a;
+  background: #f0f9f0;
+}
+
+.moodButton.selected {
+  border-color: #2e7d32;
+  background: #e8f5e8;
+}
+
+.emoji {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.stressLevel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stressLevel label {
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #e2e8f0;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2e7d32;
+  cursor: pointer;
+}
+
+.sliderLabels {
+  display: flex;
+  justify-content: space-between;
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.notes label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.notes textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.notes textarea:focus {
+  outline: none;
+  border-color: #2e7d32;
+}
+
+.submitBtn {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.submitBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.history {
+  margin-top: 3rem;
+}
+
+.history h3 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.moodList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.moodEntry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(102, 187, 106, 0.1);
+  border-radius: 8px;
+}
+
+.moodInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.date {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.stressIndicator {
+  color: #4a5568;
+  font-weight: 500;
+}

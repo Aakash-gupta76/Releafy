@@ -1,0 +1,316 @@
+.featuresContainer {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bgVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.65) saturate(1.2);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(3, 35, 53, 0.55), rgba(13, 33, 44, 0.65));
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+.hero {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  background: linear-gradient(135deg, rgba(20, 40, 57, 0.4), rgba(25, 45, 65, 0.35));
+}
+
+.title {
+  font-size: 3rem;
+  color: #bef2d6;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  text-shadow: 0 4px 20px rgba(130, 240, 201, 0.3);
+  animation: slideInDown 0.8s ease-out;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.title:hover {
+  text-shadow: 
+    0 4px 20px rgba(130, 240, 201, 0.3),
+    0 0 20px rgba(130, 240, 201, 0.5);
+  color: #82f0c9;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #b8e8e1;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  animation: slideInUp 0.8s ease-out 0.2s both;
+  transition: color 0.3s ease;
+}
+
+.subtitle:hover {
+  color: #82f0c9;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.featuresGrid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.featureCard {
+  background: linear-gradient(135deg, rgba(20, 40, 57, 0.45), rgba(25, 45, 65, 0.35));
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.25),
+    0 0 15px rgba(82, 200, 180, 0.15);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(130, 240, 201, 0.2);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInScale 0.6s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.featureCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(82, 200, 180, 0.1), rgba(82, 200, 180, 0.05));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.featureCard:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 
+    0 16px 32px rgba(82, 200, 180, 0.25),
+    0 0 25px rgba(82, 200, 180, 0.35),
+    inset 0 0 12px rgba(82, 200, 180, 0.1);
+  border-color: rgba(130, 240, 201, 0.4);
+}
+
+.featureCard:hover::before {
+  opacity: 1;
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: IconBounce 2s ease-in-out infinite;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.featureCard:hover .icon {
+  font-size: 3.5rem;
+  animation: IconBounce 1s ease-in-out infinite;
+}
+
+@keyframes IconBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.featureCard h3 {
+  color: #82f0c9;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover h3 {
+  color: #52c8b4;
+  text-shadow: 0 2px 8px rgba(82, 200, 180, 0.3);
+}
+
+.featureCard p {
+  color: #b8e8e1;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.featureCard:hover p {
+  color: #d4f0eb;
+}
+
+.tryBtn {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #52c8b4, #82f0c9);
+  color: #0b1f2a;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+}
+
+.tryBtn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.tryBtn:hover:not(:disabled) {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 
+    0 8px 20px rgba(82, 200, 180, 0.4),
+    0 0 15px rgba(130, 240, 201, 0.3);
+  background: linear-gradient(135deg, #2ba89a, #52c8b4);
+  border-color: rgba(130, 240, 201, 0.5);
+}
+
+.tryBtn:hover:not(:disabled)::before {
+  opacity: 1;
+}
+
+.tryBtn:active:not(:disabled) {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.tryBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.featureDetail {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.backBtn {
+  padding: 0.75rem 1.5rem;
+  background: rgba(82, 200, 180, 0.1);
+  color: #82f0c9;
+  border: 2px solid #82f0c9;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+}
+
+.backBtn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #82f0c9;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+  z-index: -1;
+}
+
+.backBtn:hover {
+  background: #82f0c9;
+  color: #0b1f2a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(82, 200, 180, 0.3);
+  border-color: #52c8b4;
+}
+
+.backBtn:hover::before {
+  transform: scaleX(1);
+}
+
+.backBtn:active {
+  transform: translateY(0);
+}
+
+.activeFeature {
+  background: linear-gradient(135deg, rgba(20, 40, 57, 0.45), rgba(25, 45, 65, 0.35));
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.25),
+    0 0 15px rgba(82, 200, 180, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(130, 240, 201, 0.3);
+  animation: slideInCentered 0.5s ease-out;
+  transition: all 0.3s ease;
+}
+
+@keyframes slideInCentered {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

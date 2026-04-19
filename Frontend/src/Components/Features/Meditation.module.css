@@ -1,0 +1,203 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.container h2 {
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.subtitle {
+  color: #4a5568;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.setup {
+  margin-bottom: 2rem;
+}
+
+.setup h3 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.timeOptions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.timeBtn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  color: #4a5568;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.timeBtn:hover {
+  border-color: #66bb6a;
+  background: #f0f9f0;
+}
+
+.timeBtn.selected {
+  border-color: #2e7d32;
+  background: #e8f5e8;
+  color: #2e7d32;
+}
+
+.meditationArea {
+  margin: 2rem 0;
+}
+
+.timerCircle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #66bb6a, #2e7d32);
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.timerCircle::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.timerDisplay {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.5rem;
+}
+
+.phaseMessage {
+  color: white;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0 1rem;
+  line-height: 1.4;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.breathingGuide {
+  margin: 1rem 0;
+}
+
+.breathIndicator {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: rgba(102, 187, 106, 0.1);
+  border-radius: 25px;
+  animation: breathe 4s ease-in-out infinite;
+}
+
+.breathText {
+  color: #2e7d32;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.controls {
+  margin-bottom: 2rem;
+}
+
+.startBtn, .pauseBtn, .resumeBtn, .resetBtn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin: 0 0.5rem;
+}
+
+.startBtn {
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  color: white;
+}
+
+.pauseBtn {
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+  color: white;
+}
+
+.resumeBtn {
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+  color: white;
+}
+
+.resetBtn {
+  background: linear-gradient(135deg, #9e9e9e, #757575);
+  color: white;
+}
+
+.startBtn:hover, .pauseBtn:hover, .resumeBtn:hover, .resetBtn:hover {
+  transform: translateY(-2px);
+}
+
+.tips {
+  background: rgba(102, 187, 106, 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.tips h3 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.tips ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tips li {
+  color: #4a5568;
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.tips li:before {
+  content: '🧘';
+  position: absolute;
+  left: 0;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,55 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f0f1e, #1a2332);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(40, 60, 80, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2e7d32, #66bb6a);
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(102, 187, 106, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #66bb6a, #8cd8ed);
+  box-shadow: 0 0 12px rgba(102, 187, 106, 0.5);
+}
+
+/* Selection styles */
+::selection {
+  background: linear-gradient(135deg, #66bb6a, #2e7d32);
+  color: white;
+}
+
+::-moz-selection {
+  background: linear-gradient(135deg, #66bb6a, #2e7d32);
+  color: white;
+}

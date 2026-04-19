@@ -1,0 +1,280 @@
+.container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h2 {
+  color: #bef2d6;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  color: #a0c4d8;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.statsBar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.label {
+  color: #a0c4d8;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.value {
+  color: #82f0c9;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.value.warning {
+  color: #FF6B6B;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.startScreen {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.startScreen h3 {
+  color: #bef2d6;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.levelSelector {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.levelBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100px;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(130, 240, 201, 0.1), rgba(78, 205, 196, 0.1));
+  border: 2px solid rgba(130, 240, 201, 0.3);
+  border-radius: 10px;
+  color: #a0c4d8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.levelBtn:hover {
+  border-color: #82f0c9;
+  background: linear-gradient(135deg, rgba(130, 240, 201, 0.2), rgba(78, 205, 196, 0.2));
+}
+
+.levelBtn.active {
+  background: linear-gradient(135deg, #82f0c9, #4ECDC4);
+  border-color: #bef2d6;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(130, 240, 201, 0.5);
+}
+
+.levelNum {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.levelName {
+  font-size: 0.85rem;
+}
+
+.startBtn {
+  padding: 0.75rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #82f0c9, #4ECDC4);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(130, 240, 201, 0.3);
+}
+
+.startBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(130, 240, 201, 0.5);
+}
+
+.message {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #FFE66D;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 230, 109, 0.1);
+  border-radius: 8px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  border: 2px solid rgba(130, 240, 201, 0.2);
+}
+
+.gridItem {
+  aspect-ratio: 1;
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, rgba(130, 240, 201, 0.2), rgba(78, 205, 196, 0.15));
+  border: 2px solid rgba(130, 240, 201, 0.4);
+  border-radius: 10px;
+  color: #bef2d6;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gridItem:hover:not(:disabled) {
+  background: linear-gradient(135deg, rgba(130, 240, 201, 0.3), rgba(78, 205, 196, 0.25));
+  border-color: #82f0c9;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(130, 240, 201, 0.3);
+}
+
+.gridItem:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.gridItem.clicked {
+  background: rgba(130, 240, 201, 0.1);
+  border-color: rgba(130, 240, 201, 0.2);
+  color: #82f0c9;
+  opacity: 0.5;
+}
+
+.gridItem:disabled {
+  cursor: not-allowed;
+}
+
+.hint {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 230, 109, 0.1);
+  border-radius: 8px;
+  color: #a0c4d8;
+  margin-bottom: 1.5rem;
+}
+
+.hint p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.gameOverScreen {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.gameOverScreen h3 {
+  color: #FF6B6B;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.finalScore {
+  color: #FFE66D;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.levelReached {
+  color: #82f0c9;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.restartBtn {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #82f0c9, #4ECDC4);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(130, 240, 201, 0.3);
+}
+
+.restartBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(130, 240, 201, 0.5);
+}
+
+.benefits {
+  background: rgba(130, 240, 201, 0.1);
+  border-left: 4px solid #82f0c9;
+  padding: 1rem;
+  border-radius: 5px;
+  color: #a0c4d8;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+}

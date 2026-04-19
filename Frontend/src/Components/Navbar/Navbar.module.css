@@ -1,0 +1,305 @@
+.Navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.4rem;
+  min-height: 70px;
+  background: rgba(10, 35, 52, 0.92);
+  border-bottom: 2px solid rgba(160, 232, 214, 0.4);
+  backdrop-filter: blur(15px);
+  color: #f3fbf8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.brand h3 {
+  margin: 0;
+  font-size: 1.55rem;
+  color: #edefff;
+  letter-spacing: 2px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #63c7b4, #7fceda, #8cd8ed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 3s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(130, 240, 201, 0.3);
+}
+
+@keyframes glowText {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px rgba(130, 240, 201, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(130, 240, 201, 0.6));
+  }
+}
+
+.brand span {
+  color: #96edcf;
+  font-weight: 900;
+}
+.navElement ul{
+  display: flex;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+}
+ul li{
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: #defff6;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  cursor: pointer;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(118, 204, 182, 0.5), rgba(140, 216, 237, 0.3));
+  border-radius: 999px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+ul li:hover {
+  background: rgba(118, 204, 182, 0.45);
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(118, 204, 182, 0.35);
+}
+
+ul li:hover::before {
+  opacity: 1;
+}
+
+.btnContain {
+  display: flex;
+  align-items: center;
+}
+
+.mobileBtnContain {
+  display: none;
+}
+
+.Navbtn {
+  padding: 11px 30px;
+  border: 2px solid rgba(184, 246, 224, 0.6);
+  border-radius: 999px;
+  color: #f7fffc;
+  font-weight: 700;
+  background: linear-gradient(90deg, #5fbeb8, #74c3e6);
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+}
+
+.Navbtn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.Navbtn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 
+    0 12px 32px rgba(87, 197, 188, 0.4),
+    0 4px 12px rgba(116, 195, 230, 0.3),
+    inset 0 0 12px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(90deg, #6ed5c9, #8cd9ee);
+  border-color: rgba(184, 246, 224, 0.9);
+}
+
+.Navbtn:hover::before {
+  opacity: 1;
+}
+
+.Navbtn:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.hamburger {
+  display: none;
+  width: 34px;
+  height: 26px;
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  z-index: 101;
+  transition: transform 0.35s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.15);
+}
+
+.hamburger span {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #d6f9f0, #a8e8ce);
+  left: 0;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease;
+  box-shadow: 0 2px 8px rgba(130, 240, 201, 0.2);
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 10px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 20px;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+  background: linear-gradient(90deg, #82f0c9, #5fbeb8);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+  background: linear-gradient(90deg, #82f0c9, #5fbeb8);
+}
+
+@media (max-width: 860px) {
+  .navElement {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(5, 25, 42, 0.98), rgba(10, 35, 52, 0.95));
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 20px 0;
+    z-index: 100;
+    transform: translateY(-160px) scaleY(0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: top;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(160, 232, 214, 0.2);
+  }
+
+  .navElement.active {
+    transform: translateY(0) scaleY(1);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navElement ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navElement ul li {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+  }
+
+  .navElement ul li:hover {
+    background: rgba(118, 204, 182, 0.5);
+    transform: translateX(8px);
+  }
+
+  .btnContain {
+    display: none;
+  }
+
+  .mobileBtnContain {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logoContainer:hover .logoSvg {
+  transform: rotate(-15deg) scale(1.1);
+  filter: drop-shadow(0 4px 12px rgba(130, 240, 201, 0.6));
+}
+
+.logoSvg {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+  filter: drop-shadow(0 2px 8px rgba(99, 199, 180, 0.4));
+  animation: leafSway 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes leafSway {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+}
+
+.logoText {
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #63c7b4, #7fceda, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px rgba(130, 240, 201, 0.3));
+}

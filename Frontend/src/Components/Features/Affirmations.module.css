@@ -1,0 +1,142 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.container h2 {
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.subtitle {
+  color: #4a5568;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.categorySelector {
+  margin-bottom: 2rem;
+}
+
+.categorySelector label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.select {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #2e7d32;
+}
+
+.affirmationCard {
+  background: linear-gradient(135deg, #e8f5e8, #f0f9f0);
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  margin: 2rem 0;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.affirmationText {
+  font-size: 1.5rem;
+  color: #2e7d32;
+  line-height: 1.4;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.categoryBadge {
+  background: #66bb6a;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.loading {
+  color: #4a5568;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #e53e3e;
+  font-size: 1.2rem;
+}
+
+.newBtn {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-bottom: 2rem;
+}
+
+.newBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.newBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tips {
+  text-align: left;
+  background: rgba(102, 187, 106, 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.tips h3 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.tips ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tips li {
+  color: #4a5568;
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.tips li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #66bb6a;
+  font-weight: bold;
+}
