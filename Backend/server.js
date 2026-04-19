@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 // app.use(cors());
 app.use(cors({
-  origin:"https://releafy.onrender.com",
+  origin:"releafy-frontend.vercel.app",
   credentials:true
 })
 app.use(express.json());
